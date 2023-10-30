@@ -1,0 +1,246 @@
+#game-zone .player.red,
+#start-box #btnContainer .start-btn#rouge {
+  background-color: #ff2f2f;
+  border: 1px solid #b00000;
+  color: #fff;
+}
+
+#game-zone .player.red:hover,
+#start-box #btnContainer .start-btn#rouge:hover {
+  box-shadow: 0 0 5px red;
+}
+
+#game-zone .player.yellow,
+#start-box #btnContainer .start-btn#jaune {
+  background-color: #ffff4f;
+  border: 1px solid #aeae0b;
+}
+
+#game-zone .player.yellow:hover,
+#start-box #btnContainer .start-btn#jaune:hover {
+  box-shadow: 0 0 5px yellow;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 1065px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(#71d0f9, #a3abff);
+}
+
+p {
+  margin: 0;
+}
+
+#username-containers {
+  display: flex;
+  justify-content: space-between;
+  width: 560px;
+}
+
+div[id^=start] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #2d539d;
+  color: #fff;
+}
+
+div[id^=start] p {
+  font-size: 20px;
+}
+
+div[id^=start-player] {
+  width: 260px;
+  height: 140px;
+}
+
+div[id^=start-player] input {
+  width: 100px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+
+#start-box {
+  width: 510px;
+  height: 150px;
+  padding: 15px 25px;
+  margin-top: 50px;
+}
+
+#start-box #btnContainer {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  height: 50px;
+  justify-content: space-around;
+}
+
+#start-box #btnContainer .start-btn {
+  width: 100px;
+  height: 35px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  margin: -30px 0 140px;
+}
+
+h1 span {
+  margin-left: 20px;
+}
+
+#game-zone {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#game-zone #refreshBtn,
+#game-zone #refreshSwapBtn {
+  position: absolute;
+  bottom: -95px;
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #002060;
+  background-color: #2d539d;
+  cursor: pointer;
+}
+
+#game-zone #refreshBtn:hover,
+#game-zone #refreshSwapBtn:hover {
+  box-shadow: 0 0 5px #00246a;
+}
+
+#game-zone #refreshBtn svg,
+#game-zone #refreshSwapBtn svg {
+  fill: #fff;
+  font-size: 20px;
+}
+
+#game-zone #refreshBtn {
+  left: 25%;
+}
+
+#game-zone #refreshSwapBtn {
+  right: 25%;
+}
+
+#game-zone #refreshSwapBtn img {
+  width: 32px;
+  margin-top: 2px;
+}
+
+#game-zone .player {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 125px;
+  height: 60px;
+  padding: 0 15px;
+  background-color: lightgray;
+  border-radius: 50px;
+}
+
+#game-zone .player.red:hover {
+  box-shadow: none;
+}
+
+#game-zone .player.yellow:hover {
+  box-shadow: none;
+}
+
+#game-zone .player [id^=score] {
+  font-size: 14px;
+}
+
+#game-zone .player p:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0px 20px;
+}
+
+#game-zone #board {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 720px;
+  height: 600px;
+  margin: 0 50px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+#game-zone #board #bg-transparent-rounds {
+  z-index: 100;
+  position: absolute;
+  background-image: url("../img/transparent-rounds.png");
+  width: 100%;
+  height: 100%;
+}
+
+#game-zone #board #bg-board {
+  z-index: 1;
+  position: absolute;
+  background-image: url("../img/bg.jpg");
+  width: 100%;
+  height: 100%;
+}
+
+#game-zone #board div[id^=column] {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#game-zone #board p[id^=arrow] {
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#game-zone #board .round {
+  height: 50px;
+  width: 50px;
+  margin: 25px;
+  border-radius: 50%;
+  border: 1px solid #242424;
+  background-color: transparent;
+}
+
+.pawn {
+  z-index: 50;
+  position: absolute;
+  top: -25px;
+  left: 26px;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+}
+
+.pawn.red {
+  background-color: #ff2f2f;
+}
+
+.pawn.yellow {
+  background-color: #ffff4f;
+}
